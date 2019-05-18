@@ -25,7 +25,7 @@ class AccueilTest extends TestCase
         if ($content = $controller->bienvenue($nom)->getContent()) {
             $param = json_decode($content, true);
         }
-        $this->assertSame("hello bidule", $param['message']);
+        $this->assertSame("hello bidule", $param['message']); 
         
     }
 }
