@@ -1,0 +1,11 @@
+perso:
+    path: /character/{id}
+    controller: App\Controller\Accueil::character
+    requirements:
+        id: \d+
+
+accueil:
+    path: /hello/{nom}
+    controller: App\Controller\Accueil::bienvenue
+    requirements:
+        nom: "[a-zA-Z]+"
