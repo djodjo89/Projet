@@ -1,6 +1,6 @@
 perso:
     path: /character/{id}
-    controller: App\Controller\Accueil::character
+    controller: App\Controller\PersoControleur::character
     requirements:
         id: \d+
 

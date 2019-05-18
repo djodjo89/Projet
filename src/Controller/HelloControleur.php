@@ -10,7 +10,7 @@ use App\Service\Bienvenue;
 
 // Les noms
 
-class Accueil extends AbstractController
+class HelloControleur extends AbstractController
 {    
     /**
      * Page d'accueil
@@ -21,20 +21,6 @@ class Accueil extends AbstractController
     {
         $bienvenue = new Bienvenue($nom);
         return new JsonResponse(["message" => $bienvenue->getMessage()]);
-    }
-    /*
-     * Page de description du visiteur
-     * 
-     * @Route("/character/{id}", name="character")
-     */
-    public function character(int $id)
-    {
-        $perso = new Personnage($id);
-        return new JsonResponse([
-            "name" => $perso->getPrenom(),
-            "age" => $perso->getAge(),
-            "type" => $perso->getType(),
-        ]);
     }
 }
 
