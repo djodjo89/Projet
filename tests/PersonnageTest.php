@@ -7,6 +7,14 @@ use PHPUnit\Framework\TestCase;
 
 class PersonnageTest extends TestCase
 {
+    public function testGetId()
+    {
+        $perso = new Personnage(15);
+        $this->assertSame(15, $perso->getId());
+        
+        $perso2 = new Personnage(10);
+        $this->assertSame(10, $perso2->getId());
+    }
     public function testGetType()
     {
         $perso = new Personnage(15);        

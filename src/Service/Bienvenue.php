@@ -5,9 +5,20 @@ namespace App\Service;
 class Bienvenue
 {
     private $_message;
-    public function __construct($nom)
+    /**
+     * Service Bienvenue
+     * 
+     * Définit le message à retourner en fonction du prénom entré en paramètre
+     * 
+     * @param   string  $prenom Le prénom de l'utilisateur
+     * @access  public
+     * @author  Mathys
+     * @version 1.0
+     * @see Aleatoire
+     */
+    public function __construct($prenom)
     {
-        switch ($nom)
+        switch ($prenom)
         {
             case "lafourche":
                 $this->_message = 'Vous êtes bien tombé.e.';
@@ -18,7 +29,7 @@ class Bienvenue
                 break;
                 
             default:
-                $this->_message = 'hello '.$nom;
+                $this->_message = 'hello '.$prenom;
             break;
         }
     }

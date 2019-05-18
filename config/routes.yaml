@@ -5,7 +5,12 @@ perso:
         id: \d+
 
 accueil:
-    path: /hello/{nom}
+    path: /hello/{prenom}
     controller: App\Controller\Accueil::bienvenue
     requirements:
         nom: "[a-zA-Z]+"
+
+app.swagger_ui:
+    path: /api/doc
+    methods: GET
+    defaults: { _controller: nelmio_api_doc.controller.swagger_ui }
